@@ -1,0 +1,32 @@
+==CSS326-24G-2S+ Port Based VLAN==
+
+===VLAN Example #1 (Trunk and Access Ports)===
+
+[[File:Port-Based.png|center|frame|alt=Alt text|Example 1 Setup Diagram]]
+<br/>
+1) In VLAN menu configure Default VLAN ID on planned access ports to assign untagged traffic to specific VLAN in the switch.
+<br/>
+[[File:vlane1_css326.png|alt=Alt text|Access Ports|center|frame]]
+<br/>
+2) In VLANs menu add VLAN entries and specify port membership to certain VLANs.
+<br/>
+[[File:vlane2_css326.png|alt=Alt text|VLAN Membership|center|frame]]
+<br/>
+3) At the end, enable strict VLAN filtering to ensure only allowed VLANs can pass through the ports.
+<br/>
+[[File:vlane3_css326.png|alt=Alt text|VLAN Filtering|center|frame]]
+<br/>
+
+===VLAN Example #2 (Trunk and Hybrid Ports)===
+
+[[File:Portbased-vlan2.png|center|frame|alt=Alt text|Example 2 Setup Diagram]]
+<br/>
+1) In VLAN menu configure Default VLAN ID on planned hybrid ports to assign untagged traffic to specific VLAN in the switch.
+[[File:vlane1_css326.png|alt=Alt text|Default VLAN ID for untagged traffic|center|frame]]
+<br/>
+2) In VLANs menu add VLAN entries and specify port membership to certain VLANs. Just like the previous example, add ports with untagged traffic (defined by Default VLAN ID) to certain VLAN (black arrows). Also, we need to add ports, which are allowed to forward tagged traffic.
+[[File:Swos_vlan_example2.png|alt=Alt text|VLAN Membership|center|frame]]
+<br/>
+3) At the end, enable strict VLAN filtering to ensure only allowed VLANs can pass through the ports. For hybrid ports to work properly, make sure VLAN Receive is selected as <code>any</code>, otherwise ingress tagged or untagged traffic can be dropped (depending on selected option), but for the trunk port, it is possible to allow only packets with VLAN tag. To filter specific ingress VLAN traffic on hybrid ports, use [[SwOS/CSS326#ACL_Tab | ACL rules]].
+[[File:vlane3_css326.png|alt=Alt text|VLAN Filtering|center|frame]]
+<br/>
