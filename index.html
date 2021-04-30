@@ -23,29 +23,46 @@
 	<script async type="text/javascript" src="https://cncdn.gaohou.net/js/foundation5.min.js"></script>
 	<script async type="text/javascript" src="https://cncdn.gaohou.net/js/init.js"></script>
 	<!-- <script async src="https://mikrotik.com/js/jquery.cookie.js"></script> -->
-	<script type="text/javascript">
-var resizefncs=[],scrollfncs=[];
+	<script defer type="text/javascript">
+var resizefncs=[];//,scrollfncs=[];
 $(document).ready(function(){
-	loadFoundation();
-	resizefncs.push("assignBorder();");resizefncs.push("adjustDrop();");
+	loadAfterFoundation();
+	resizefncs.push("makeBorder();");resizefncs.push("adjustDrop();");/*scrollfncs.push("makeBorder();");*/
 	$(window).on('resize',performResize);
 	$(window).on('scroll',performScroll);
 	$(window).on('click',performClick);
 	performResize();
+    
 });
-function loadFoundation(){
+function loadScript(isrc){
+	dd=new Date();
+	xsrc=isrc+'?'+dd.getDate().toString()+dd.getHours().toString();
+	if($('head script[src="'+isrc+'"]').length){return;}
+	if($('head script[src="'+xsrc+'"]').length){return;}
+	e="scr"+"ipt";scr=document.createElement(e);
+	scr.type="text/"+"ja"+"va"+e;
+	scr.src=xsrc;
+	/*scr.async=true;*/
+	scr.defer=true;
+	document.getElementsByTagName('head')[0].appendChild(scr);
+}
+function loadAfterFoundation(){
 	if(typeof $(document).foundation == "function"){
-		$(document).foundation({ accordion: { multi_expand: true } });
+		loadScript("https://i.mt.lv/js/foundation.orbit.min.js");
+		loadScript("https://i.mt.lv/js/foundation.tooltip.min.js");
+		waitOrb();
 	} else {
-		window.setTimeout(function(){loadFoundation();},50);
+		window.setTimeout(function(){loadAfterFoundation();},50);
 	}
 }
-
+function waitOrb(){if(typeof Foundation.libs == "object" && typeof Foundation.libs.orbit == "object" && typeof Foundation.libs.tooltip == "object"){
+	$(document).foundation({ accordion: { multi_expand: true } });
+}else{setTimeout("waitOrb()",50);}}
 function performResize(){for(d in resizefncs){window.setTimeout(resizefncs[d],0);}}
 function performScroll(){for(d in resizefncs){window.setTimeout(resizefncs[d],0);}}
 function performClick(){for(d in resizefncs){window.setTimeout(resizefncs[d],0);}}
 /*border to nav*/
-function assignBorder(){makeBorder();resizefncs.push("makeBorder();");scrollfncs.push("makeBorder();");}
+//function assignBorder(){makeBorder();/*resizefncs.push("makeBorder();");scrollfncs.push("makeBorder();");*/}
 function makeBorder(){
 	x=$("#sm-start, .sm-menu").position().top,
 	y=$(this).scrollTop(),
@@ -60,7 +77,6 @@ function makeBorder(){
 	}
 }
 function adjustDrop(){em=".page_title_empty";if ($(em).length>0){hh=Math.floor($(".page_top").height());if($(".sm-menu").is(':visible')){hh=hh+Math.floor($(".sm-menu").height());}$(em).css('height',hh+'px');}}
-function debugM(){loadFoundation();}
 	</script>
 <style type="text/css">
 .mt-head{background:url("//i.mt.lv/img/mt/v2/head/5.jpg") 0%;background-size:cover;opacity:0.45}
@@ -111,28 +127,17 @@ function debugM(){loadFoundation();}
 }
 </style>
 <script type="text/javascript">
-function gasend(ur,tit){
-	ga('send','event','outbound','click',ur,{
-		'transport':'beacon',
-		'eventLabel':tit,
-		'hitCallback':function(){window.open(ur);}
+function openContinent(country){
+	if(!country) return;
+	$('.tab-title a').each(function(){
+		var o=$(this),t=o.text();
+		if (t.toLowerCase().indexOf(country.toLowerCase()) > -1){
+			setTimeout(function(){ o.click(); },300);
+		}
 	});
 }
-function loadOrbit(){
-	if(typeof $(document).foundation == "function"){
-		s=document.createElement("scr"+"ipt");s.type="text/jav"+"ascr"+"ipt";s.src="https://cncdn.gaohou.net/js/foundation.orbit.min.js";s.async=true;$("head").append(s);
-		execOrbit();
-	} else {
-		window.setTimeout(function(){loadOrbit();},5);
-	}
-}
-function execOrbit(){
-	console.log(Foundation.libs.orbit);
-	if(typeof Foundation.libs.orbit == "object"){
-		loadFoundation();
-	} else {
-		window.setTimeout(function(){execOrbit();},5);
-	}
+function gasend(ur,tit){
+	ga('send','event','outbound','click',ur,{'transport':'beacon','eventLabel':tit,'hitCallback':function(){window.open(ur);} });
 }
 $(document).ready(function(){
 	$('.top_container').hide().delay(500).fadeIn('slow');
@@ -143,26 +148,14 @@ $(document).ready(function(){
 			$(window).trigger('resize');
 		});
 	});
-	$('#slide1_btn').click(function(){
-		gasend('http://mum.mikrotik.com/2017/EU/info/EN','MAIN:EU MUM');
-		return false;
+	$('.tab-title a').click(function () {
+		$(window).trigger('resize').trigger('scroll');
 	});
-	$('#slide2_btn').click(function(){
-		gasend('https://routerboard.com/RB952Ui-5ac2nD-TC','MAIN:hap ac lite tower');
-		return false;
-	});  
-    
-	$('#slide3_btn').click(function(){
-		gasend('https://routerboard.com/RBOmniTikPG-5HacD','MAIN: OmniTIk 5 ac');
-		return false;
-	});     
-	loadOrbit();
 });
 </script>
-
-    <noscript>
-		<style>.top_container{display:block;}</style>
-    </noscript>
+<script type="text/javascript">$(document).ready(function(){openContinent("North America");})</script>
+	<script defer type="text/javascript" src="https://i.mt.lv/js/mt/listing.js"></script>
+	<noscript><style type="text/css">.top_container{display:block;}</style></noscript>
 </head>
 
 <body>
