@@ -1,0 +1,675 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<title>MikroTik Routers and Wireless</title>
+	<meta charset="utf-8" />
+	<meta property="og:url" content="https://mikrotik.com/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="MikroTik" />
+	<meta property="og:description" content="MikroTik makes networking hardware and software, which is used in nearly all countries of the world. Our mission is to make existing Internet technologies faster, more powerful and affordable to wider range of users." />
+	<meta property="og:image" content="https://mikrotik.com/img/mtv2/logo_fb_2.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="MikroTik makes networking hardware and software, which is used in nearly all countries of the world. Our mission is to make existing Internet technologies faster, more powerful and affordable to wider range of users." />
+	<meta name="keywords" content="download, mikrotik, routeros, switchos, winbox, netinstall, traffic sniffer for linux, bandwidth test for windows, neighbour viewer for windows, routerboard wireless drivers, routeros package, routeros torrent, routeros changelog" />
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/mtv2/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/mtv2/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/mtv2/favicon-16x16.png" />
+	<link rel="manifest" href="/img/mtv2/site.webmanifest" />
+	<link rel="mask-icon" href="/img/mtv2/safari-pinned-tab.svg" color="#5bbad5" />
+	<meta name="msapplication-TileColor" content="#da532c" />
+	<meta name="theme-color" content="#ffffff" />
+
+	<link rel="stylesheet" type="text/css" href="https://i.mt.lv/css/mt/app.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://i.mt.lv/css/mt/custom.css" />
+	<link rel="stylesheet" type="text/css" href="https://i.mt.lv/css/mt/global.css" />
+	<link rel="stylesheet" type="text/css" href="https://i.mt.lv/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://i.mt.lv/css/google-fonts-open-sans.css" />
+
+	<script type="text/javascript" src="https://i.mt.lv/js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="https://i.mt.lv/js/lazyload.2.0.0.b.min.js"></script>
+	<script type="text/javascript" src="https://i.mt.lv/js/jquery/jquery.cookie.min.js"></script>
+	<script defer type="text/javascript" src="https://i.mt.lv/js/modernizr.min.js"></script>
+	<script defer type="text/javascript" src="https://i.mt.lv/js/foundation5.min.js"></script>
+	<script defer type="text/javascript" src="https://i.mt.lv/js/mt/init.js"></script>
+	<script defer type="text/javascript">
+var resizefncs=[];//,scrollfncs=[];
+$(document).ready(function(){
+	loadAfterFoundation();
+	resizefncs.push("makeBorder();");resizefncs.push("adjustDrop();");/*scrollfncs.push("makeBorder();");*/
+	$(window).on('resize',performResize);
+	$(window).on('scroll',performScroll);
+	$(window).on('click',performClick);
+	performResize();
+    
+});
+function loadScript(isrc){
+	dd=new Date();
+	xsrc=isrc+'?'+dd.getDate().toString()+dd.getHours().toString();
+	if($('head script[src="'+isrc+'"]').length){return;}
+	if($('head script[src="'+xsrc+'"]').length){return;}
+	e="scr"+"ipt";scr=document.createElement(e);
+	scr.type="text/"+"ja"+"va"+e;
+	scr.src=xsrc;
+	/*scr.async=true;*/
+	scr.defer=true;
+	document.getElementsByTagName('head')[0].appendChild(scr);
+}
+function loadAfterFoundation(){
+	if(typeof $(document).foundation == "function"){
+		loadScript("https://i.mt.lv/js/foundation.orbit.min.js");
+		loadScript("https://i.mt.lv/js/foundation.tooltip.min.js");
+		waitOrb();
+	} else {
+		window.setTimeout(function(){loadAfterFoundation();},50);
+	}
+}
+function waitOrb(){if(typeof Foundation.libs == "object" && typeof Foundation.libs.orbit == "object" && typeof Foundation.libs.tooltip == "object"){
+	$(document).foundation({ accordion: { multi_expand: true } });
+}else{setTimeout("waitOrb()",50);}}
+function performResize(){for(d in resizefncs){window.setTimeout(resizefncs[d],0);}}
+function performScroll(){for(d in resizefncs){window.setTimeout(resizefncs[d],0);}}
+function performClick(){for(d in resizefncs){window.setTimeout(resizefncs[d],0);}}
+/*border to nav*/
+//function assignBorder(){makeBorder();/*resizefncs.push("makeBorder();");scrollfncs.push("makeBorder();");*/}
+function makeBorder(){
+	x=$("#sm-start, .sm-menu").position().top,
+	y=$(this).scrollTop(),
+	grid='.contain-to-grid',
+	cl='bar-border';
+
+	if ($('.smally').is(':visible') && $('.top-bar.expanded').is(':visible')){
+		if (y>x-388) { $(grid).addClass(cl);} else { $(grid).removeClass(cl); }
+	} else {
+		if ($('.page_top.show-for-medium-up').is(':visible') || y<=x-80 ){ $(grid).removeClass(cl); }
+		else{ $(grid).addClass(cl); }
+	}
+}
+function adjustDrop(){em=".page_title_empty";if ($(em).length>0){hh=Math.floor($(".page_top").height());if($(".sm-menu").is(':visible')){hh=hh+Math.floor($(".sm-menu").height());}$(em).css('height',hh+'px');}}
+	</script>
+<style type="text/css">
+	.mt-head {
+		background-size: cover;
+		background-position: 17%;
+		opacity: 0.55;
+	}
+	.slide1 .mt-head {
+		background-image: url("//i.mt.lv/img/mt/v2/head/CRS504-4XQ-IN.jpg");
+	}
+	.slide2 .mt-head {
+		background-image: url("//i.mt.lv/img/mt/v2/head/CCR2216.jpg");
+	}
+	.slide3 .mt-head {
+		background-image: url("//i.mt.lv/img/mt/v2/head/RB5009.jpg");
+	}
+	.slide4 .mt-head {
+		background-image: url("//i.mt.lv/img/mt/v2/head/CCR2116.jpg");
+	}
+	.slide5 .mt-head {
+		background-image: url("//i.mt.lv/img/mt/v2/head/hap_ac3_head.jpg");
+		background-position: 13%;
+	}
+	.slide6 .mt-head {
+		background-image: url("//i.mt.lv/img/mt/v2/head/chateau_5g_ax.jpg");
+	}
+	.slide7 .mt-head {
+		background-image: url("//i.mt.lv/img/mt/v2/head/hap_ax2.jpg");
+	}
+
+	.wide .columns{text-align:center !important}
+	.wide .columns h1, .wide .columns p {
+		color:white;
+	}
+
+	.headbtn {
+		color: black;
+		background: white;
+		padding: 10px 60px !important;
+		font-weight: bold;
+	}
+	.slide1 .headbtn { color: #5e686f }
+	.slide2 .headbtn { color: #5e686f }
+	.slide3 .headbtn { color: #552b6d }
+	.slide4 .headbtn { color: #7c489d }
+	.slide5 .headbtn { color: #466776 }
+	.slide6 .headbtn { color: #466776 }
+	.slide7 .headbtn { color: #466776 }
+
+	.slide1 .headbtn:hover, .slide1 .headbtn:focus { background:#4d0141; color: white; }
+	.slide2 .headbtn:hover, .slide2 .headbtn:focus { background:#482375; color: white; }
+	.slide3 .headbtn:hover, .slide3 .headbtn:focus { background:#731e03; color: white }
+	.slide4 .headbtn:hover, .slide4 .headbtn:focus { background:#b0236f; color: white }
+	.slide5 .headbtn:hover, .slide5 .headbtn:focus { background:#314b57; color: white }
+	.slide6 .headbtn:hover, .slide6 .headbtn:focus { background:#9d1702; color: white }
+	.slide7 .headbtn:hover, .slide7 .headbtn:focus { background:#dc0b5c; color: white }
+
+	@media only screen and (min-width:48.063em) {
+		.mt-head {
+			background: url("//i.mt.lv/img/mt/v2/head/5.jpg");
+			background-position: 30%;
+			background-size: cover;
+			opacity: 1;
+		}
+
+		.wide .columns{text-align:left !important}
+		.wide .columns p,.wide .columns h1{color:white}
+
+		.cl {
+			background:url("//i.mt.lv/img/mt/v2/transparent10.png");
+			padding:0px 30px 10px 30px;
+			border-radius:3px;
+		}
+		.wide p {
+			font-size: 14px
+		}
+	}
+</style>
+<script type="text/javascript">
+function openContinent(country){
+	if(!country) return;
+	$('.tab-title a').each(function(){
+		var o=$(this),t=o.text();
+		if (t.toLowerCase().indexOf(country.toLowerCase()) > -1){
+			setTimeout(function(){ o.click(); },300);
+		}
+	});
+}
+function gasend(ur,tit){
+	ga('send','event','outbound','click',ur,{'transport':'beacon','eventLabel':tit,'hitCallback':function(){window.open(ur);} });
+}
+$(document).ready(function(){
+	$('.top_container').hide().delay(500).fadeIn('slow');
+	//MUM list
+	$('#show_events').click(function(){
+		$(this).fadeOut(function(){
+			$('#more_events').fadeIn();
+			$(window).trigger('resize');
+		});
+	});
+	$('.tab-title a').click(function () {
+		$(window).trigger('resize').trigger('scroll');
+	});
+});
+</script>
+
+	<script defer type="text/javascript" src="https://i.mt.lv/js/mt/listing.js"></script>
+	<noscript><style type="text/css">.top_container{display:block;}</style></noscript>
+</head>
+<body>
+	<span id="mt_load_scroll_to_top"></span>
+	<div class="wrapper">
+	<header class="holder">
+<div class="contain-to-grid">
+	<nav class="top-bar" data-topbar role="navigation" data-options="sticky_on:large">
+		<ul class="title-area">
+			<li class="name">
+				<h1>
+					<a href="/">
+						<img src="/img/mtv2/newlogo.svg" alt="MikroTik Logo" style="width: 20vw; max-width: 200px; min-width: 100px" />
+					</a>
+				</h1>
+			</li>
+			<li class="toggle-topbar menu-icon">
+				<a href="#">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+			</li>
+		</ul>
+		<section class="top-bar-section">
+<ul class="right triger">
+<li  class="active"><a href="https://mikrotik.com/" >Home</a></li><li ><a href="https://mikrotik.com/aboutus" >About</a></li><li ><a href="https://mikrotik.com/buy" >Buy</a></li><li ><a href="https://darbs.mikrotik.com" >Jobs</a></li><li ><a href="https://mikrotik.com/products" >Hardware</a></li><li ><a href="https://mikrotik.com/download" >Software</a></li><li ><a href="https://mikrotik.com/support" >Support</a></li><li ><a href="https://mikrotik.com/training" >Training</a></li><li ><a href="https://mikrotik.com/client" >Account</a></li>
+</ul>
+		</section>
+	</nav>
+</div>
+	</header>
+
+
+	<div id="sm-start" class=" spec-space">
+
+
+<div class="slideshow-wrapper">
+	<div class="preloader"></div>
+	<ul data-orbit data-options="animation:fade;navigation_arrows:true;bullets:true;slide_number:false;pause_on_hover:false;timer_speed:10000;">
+		
+		<li>
+			<div class="wide slide5">
+				<div class="top_container">
+					<div class="inner_top">
+						<div class="top_content">
+							<div class="row">
+								<div class="medium-6 medium-push-6 columns">
+										<h1>hAP ac³</h1>
+	<p>
+		Our bestselling home router is back &ndash; and it is faster
+		than ever! The hAP ac³ is the Swiss army knife of home
+		networking with Gigabit Ethernet, handy iOS/Android app for
+		easy configuration, PoE, 128 NAND and powerful external
+		high-gain antennas.
+	</p>
+	<a href="https://mikrotik.com/product/hap_ac3" class="button tiny radius headbtn">
+		More details
+	</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-head"></div>
+				<div class="border-on"></div>
+			</div>
+		</li>
+		
+		<li>
+			<div class="wide slide7">
+				<div class="top_container">
+					<div class="inner_top">
+						<div class="top_content">
+							<div class="row">
+								<div class="medium-6 medium-push-6 columns">
+										<h1>hAP ax²</h1>
+	<p>
+		Supercharge your home network with the Gen6 AX wireless. hAP ax² has everything
+		you might need in a primary home access point &ndash; and more! Forget endless
+		reviews and comparisons &ndash; this is the perfect device for 99% of homes.
+	</p>
+	<a href="https://mikrotik.com/product/hap_ax2" class="button tiny radius headbtn">
+		More details
+	</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-head"></div>
+				<div class="border-on"></div>
+			</div>
+		</li>
+		
+		<li>
+			<div class="wide slide2">
+				<div class="top_container">
+					<div class="inner_top">
+						<div class="top_content">
+							<div class="row">
+								<div class="medium-6 medium-push-6 columns">
+										<h1>CCR2216-1G-12XS-2XQ</h1>
+	<p>
+		The new MikroTik flagship with the power of a whole fleet.
+		Unleash the power of 100 Gigabit networking with L3 Hardware
+		Offloading! This router can be a handy drop-in upgrade for
+		existing CCR1072 setups.
+	</p>
+	<a href="https://mikrotik.com/product/ccr2216_1g_12xs_2xq" class="button tiny radius headbtn">
+		More details
+	</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-head"></div>
+				<div class="border-on"></div>
+			</div>
+		</li>
+		
+		<li>
+			<div class="wide slide6">
+				<div class="top_container">
+					<div class="inner_top">
+						<div class="top_content">
+							<div class="row">
+								<div class="medium-6 medium-push-6 columns">
+										<h1>Chateau 5G ax</h1>
+	<p>
+		The future of mobile internet. Gen6 AX Wireless, 2.5 Gigabit Ethernet, and the
+		fastest LTE/5G modem with powerful built-in and external antennas. Jack of all
+		trades... master of many!
+	</p>
+	<a href="https://mikrotik.com/product/chateau_5g_ax" class="button tiny radius headbtn">
+		More details
+	</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-head"></div>
+				<div class="border-on"></div>
+			</div>
+		</li>
+		
+		<li>
+			<div class="wide slide4">
+				<div class="top_container">
+					<div class="inner_top">
+						<div class="top_content">
+							<div class="row">
+								<div class="medium-6 medium-push-6 columns">
+										<h1>CCR2116</h1>
+	<p>
+		Forget about CPU limitations in 10G setups with this powerful
+		16-core ARM CPU based CCR. Double the performance of our
+		previous 36-core CCR, 6x faster BGP performance. Includes an
+		M.2 PCIe slot.
+	</p>
+	<a href="https://mikrotik.com/product/ccr2116_12g_4s" class="button tiny radius headbtn">
+		More details
+	</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-head"></div>
+				<div class="border-on"></div>
+			</div>
+		</li>
+		
+		<li>
+			<div class="wide slide1">
+				<div class="top_container">
+					<div class="inner_top">
+						<div class="top_content">
+							<div class="row">
+								<div class="medium-6 medium-push-6 columns">
+										<h1>CRS504-4XQ-IN</h1>
+	<p>
+		Your most affordable, compact, energy-efficient doorway to
+		the world of 100 Gigabit networking. This switch is the next
+		step in upgrading existing 10 or 25 Gigabit networks.
+		Multiple powering options, dual hot-swap power supplies.
+	</p>
+	<a href="https://mikrotik.com/product/crs504_4xq_in" class="button tiny radius headbtn">
+		More details
+	</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-head"></div>
+				<div class="border-on"></div>
+			</div>
+		</li>
+		
+		<li>
+			<div class="wide slide3">
+				<div class="top_container">
+					<div class="inner_top">
+						<div class="top_content">
+							<div class="row">
+								<div class="medium-6 medium-push-6 columns">
+										<h1>RB5009</h1>
+	<p>
+		The ultimate heavy-duty home lab router with USB 3.0, 1G and
+		2.5G Ethernet and a 10G SFP+ cage. You can mount four of these
+		new routers in a single 1U rackmount space! Unprecedented
+		processing power in such a small form factor.
+	</p>
+	<a href="https://mikrotik.com/product/rb5009ug_s_in" class="button tiny radius headbtn">
+		More details
+	</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-head"></div>
+				<div class="border-on"></div>
+			</div>
+		</li>
+		
+	</ul>
+</div>
+
+<div class="row title border-on">
+	<div class="large-12 columns text-center">
+		<h1>WHAT'S NEW IN MIKROTIK?</h1>
+		<div class="h_line"></div>
+	</div>
+</div>
+
+
+<div class="row news">
+	<div class="medium-6 columns">
+		<a href="https://merch.mikrotik.com"><img src="https://i.mt.lv/cdn/mt/436eaec5b5de170f4adc86994db18c9e.jpg" alt="" /></a>
+		<h2>Merch is here!</h2><p>Buy the merch! Or at least, <a href="https://youtu.be/jzAdoM3S2_I">watch our video about it</a>. </p>
+	</div>
+	<div class="medium-6 columns">
+		<a href="https://mt.lv/News108"><img src="https://i.mt.lv/cdn/mt/55955fabeb2abb5a407186bf8490bbff.jpg" alt="" /></a>
+		<h2>Newsletter October 2022 (#108)</h2><ul>Read our latest newsletter and learn more about:
+<li>hAP ax&sup3; (2.5G Ethernet &amp; USB!)</li>
+<li>ATL LTE18 kit</li>
+<li>FiberBox Plus</li>
+<li>how LinusTechTips managed to save $100K with MikroTik</li>
+<li>MikroTik MERCH, and more!</li>
+</ul>
+<p><a href="http://www.mt.lv/News108" target="_blank" rel="noreferrer">http://www.mt.lv/News108</a></p>
+	</div>
+</div>
+<div class="row news">
+	<div class="medium-6 columns">
+		<a href="https://youtu.be/aRPKUDvNyjM"><img src="https://i.mt.lv/cdn/mt/4f6920b4d3b02dc1e1478ba0b148553b.jpg" alt="" /></a>
+		<h2>hAP ax 2</h2><p>Finally! hAP ax&sup2; &ndash; a Wi-Fi6 version of the legendary hAP ac&sup2;. With PoE-in and PoE-out, much faster wireless, more RAM, and a modern CPU. Amazing performance and value!</p>
+	</div>
+	<div class="medium-6 columns">
+		<a href="https://www.youtube.com/mikrotik"><img src="https://i.mt.lv/cdn/mt/8403d18079ddbd441f65713e5d2d5fb5.jpg" alt="" /></a>
+		<h2>Check out our YouTube channel! </h2><p>If you like to be the first to know everything about our new products, RouterOS lifehacks, live events, and more... Subscribe to our YouTube channel and always be the first one to know! We now also have biweekly newsletter overview VLOG, tips and tricks (MikroTips!) and other videos.</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-12 columns news_soc show-for-medium-up">
+		<hr />
+		<div class="row">
+			<div class="small-8 columns">
+				<p>
+You can also follow us and get the latest updates on <b><a href="https://twitter.com/mikrotik_com" target="_blank">Twitter</a></b>
+or <b><a href="https://www.facebook.com/mikrotik" target="_blank">Facebook!</a></b>
+				</p>
+			</div>
+			<div class="small-4 columns text-right">
+				<a href="https://twitter.com/mikrotik_com" target="_blank">
+					<img src="https://i.mt.lv/img/mt/v2/twitter.png" alt="" width="32" height="32"/>
+				</a>
+				<a href="https://www.facebook.com/mikrotik" target="_blank">
+					<img src="https://i.mt.lv/img/mt/v2/facebook.png" alt="" width="32" height="32"/>
+				</a>
+			</div>
+		</div>
+		<hr />
+	</div>
+	<div class="large-12 columns show-for-small-only small-soc">
+		<hr />
+		<div class="row">
+			<div class="large-12 columns text-center">
+				<p>
+You can also follow us and get the latest updates on <b><a href="https://twitter.com/mikrotik_com" target="_blank">Twitter</a></b>
+or <b><a href="https://www.facebook.com/mikrotik" target="_blank">Facebook!</a></b>
+				</p>
+				<a href="https://twitter.com/mikrotik_com" target="_blank">
+					<img src="https://i.mt.lv/img/mt/v2/twitter.png" alt="" width="32" height="32"/>
+				</a>
+				<a href="https://www.facebook.com/mikrotik" target="_blank">
+					<img src="https://i.mt.lv/img/mt/v2/facebook.png" alt="" width="32" height="32"/>
+				</a>
+			</div>
+		</div>
+		<hr style="margin:8px 0 0 0;" />
+	</div>
+</div>
+
+
+
+<div class="row title border-on">
+	<div class="large-12 columns text-center">
+		<h1>MIKROTIK TRAINING</h1>
+		<div class="h_line"></div>
+	</div>
+</div>
+
+<div class="row text-center training_f" data-equalizer>
+	<div class="medium-4 columns">
+		<div data-equalizer-watch>
+			<img src="//i.mt.lv/img/mt/v2/icon_training.png" alt="" width="180" height="180"/>
+			<h2>Training</h2>
+			<p>
+				MikroTik training sessions are organized and provided by MikroTik Training Centers at various locations around the World. They are attended by network engineers, integrators and managers, who would like to learn about routing and managing wired and wireless networks using MikroTik RouterOS.
+			</p>
+		</div>
+		<a href="/training" class="button small radius expand">Find out more</a>
+	</div>
+	<div class="medium-4 columns">
+		<div data-equalizer-watch>
+			<img src="//i.mt.lv/img/mt/v2/icon_trainers.png" alt="" width="180" height="180"/>
+			<h2>Trainers &amp; Academies</h2>
+			<p>
+				MikroTik Academies are educational institutions such as universities, technical schools, colleges, vocational schools, and other educational institutions offering semester time based Internet networking courses for their academic students using MikroTik RouterOS as a learning tool.
+			</p>
+		</div>
+		<a href="/training/centers" class="button small radius expand">Open the map</a>
+	</div>
+	<div class="medium-4 columns">
+		<div data-equalizer-watch>
+			<img src="//i.mt.lv/img/mt/v2/icon_graduation.png" alt="" width="180" height="180"/>
+			<h2>Graduation</h2>
+			<p>
+				Every year there are around <b>2000 - 3000</b> graduates who have successfully completed a MikroTik courses. Our certificates are recognized world wide and stand for good knowledge about network administration, using RouterBOARD and RouterOS.
+			</p>
+		</div>
+		<a href="/training/history/" class="button small radius expand">Training history</a>
+	</div>
+</div>
+
+
+
+<div class="swhw_wrap">
+	<div class="row title border-on">
+		<div class="large-12 columns text-center">
+			<h1>HARDWARE & SOFTWARE</h1><div class="h_line"></div>
+		</div>
+	</div>
+	<div class="row text-center swhw" data-equalizer>
+		<div class="medium-4 columns"><div data-equalizer-watch>
+			<img src="https://i.mt.lv/img/mt/v2/icon_ros.png" alt="" width="50" height="58"/>
+			<h2>RouterOS</h2>
+			<p>
+RouterOS is the operating system of RouterBOARD hardware. It has all the necessary features for an ISP - routing, firewall, bandwidth management, wireless access point, backhaul link, hotspot gateway, VPN server and more. Quick and simple installation and an easy to use interface!
+			</p>
+		</div>
+		<a href="/software" class="button small radius expand">Find out more</a>
+		</div>
+		<div class="medium-4 columns">
+			<div data-equalizer-watch>
+				<img src="https://i.mt.lv/img/mt/v2/icon_catalog.png" alt="" width="58" height="58"/>
+				<h2>Product catalog</h2>
+				<p>
+MikroTik manufactures routers, switches and wireless systems for every purpose, from small office or home, to carrier ISP networks, there is a device for every purpose. See our product catalog for a complete list of our products and their features.
+				</p>
+			</div>
+			<a href="https://box.mikrotik.com/f/6ec81bd8598d4faaa356/?dl=1" class="button small radius expand" target="_blank">Open catalog</a>
+		</div>
+		<div class="medium-4 columns">
+			<div data-equalizer-watch>
+				<img src="https://i.mt.lv/img/mt/v2/icon_world.png" alt="" width="55" height="58"/>
+				<h2>Distribution</h2>
+				<p>
+To purchase our RouterBOARD, CCR, CRS and other products, and also to receive technical support and pre-sales consultation, please contact our wide network of distributors. See the map to find the nearest one.
+				</p>
+			</div>
+			<a href="/buy" class="button small radius expand">Find out more</a>
+		</div>
+	</div>
+</div>
+
+	</div>
+
+	<footer>
+		<div class="row">
+			<div class="small-4 medium-2 columns">
+				<h2>MikroTik</h2>
+				<ul>
+					<li><a href="https://mikrotik.com">Home</a></li>
+					<li><a href="https://mikrotik.com/aboutus">About</a></li>
+					<li><a href="https://mikrotik.com/customers">Customers</a></li>
+					<li><a href="https://darbs.mikrotik.com">Jobs</a></li>
+				</ul>
+			</div>
+			<div class="small-4 medium-2 columns">
+				<h2>Support</h2>
+				<ul>
+					<li><a href="https://mikrotik.com/support">Get support</a></li>
+					<li><a href="//forum.mikrotik.com">Forum</a></li>
+					<li><a href="//wiki.mikrotik.com/wiki/Main_Page">Wiki</a></li>
+					<li><a href="mailto:support@mikrotik.com">Send an E-mail</a></li>
+				</ul>
+			</div>
+			<div class="small-4 medium-2 columns">
+				<h2>Other</h2>
+				<ul>
+					<li><a href="//help.mikrotik.com/docs/pages/viewrecentblogposts.action?key=ROS">Newsletters</a></li>
+					<li><a href="//mum.mikrotik.com">MUM</a></li>
+					<li><a href="//designs.mikrotik.com">Designs</a></li>
+					<li><a href="https://mikrotik.com/privacy">Privacy policy</a></li>
+					<li style="display:none"><a href="//english-145815446642.spampoison.com" style="display:none">Click Here</a></li>
+				</ul>
+			</div>
+			<div class="medium-5 columns fl">
+				<h2>Sign up for the newsletter</h2>
+				<p>Please sign up to get notified about new RouterOS version releases and other useful information!</p>
+				<form action="https://mikrotik.com/notifications" method="post">
+					<div class="row collapse">
+						<div class="large-12 columns">
+							<input type="submit" id="email_subscribe_footer" name="email_subscribe_footer" class="button postfix subscr" value="Subscribe!"/>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-12 column"><hr/></div>
+			<div class="small-4 medium-6  large-2 columns">
+				<a href="/">
+					<img class="foot_logo" src="/img/mtv2/newlogo.svg" alt="MikroTik Logo" style="filter: invert(100%); margin-top: 12px" />
+				</a>
+			</div>
+			<div class="small-8 medium-6 large-3 columns text-right">
+				<ul class="footer_soc">
+					<li>
+						<a href="mailto:sales@mikrotik.com">
+						<img class="rotate_s" src="https://i.mt.lv/img/mt/v2/mail.png" alt="Envelope icon"/>
+						</a>
+					</li>
+					<li>
+						<a href="https://facebook.com/mikrotik">
+						<img class="rotate_s" src="https://i.mt.lv/img/mt/v2/facebook.png" alt="Facebook icon"/>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/mikrotik_com">
+						<img class="rotate_s" src="https://i.mt.lv/img/mt/v2/twitter.png" alt="Twitter icon"/>
+						</a>
+					</li>
+					<li>
+						<a href="https://youtube.com/mikrotik">
+						<img class="rotate_s" src="https://i.mt.lv/img/mt/v2/youtube_circle.png" alt="Youtube icon"/>
+						</a>
+					</li>
+				</ul>
+			</div>
+            <div class="large-12 column show-for-medium-down"><hr/></div>
+            <div class="large-5 columns text-right">  
+                <span style="padding-right:15px">MikroTik app</span> 
+                <a href="https://itunes.apple.com/app/id1323064830"><img style="width:120px" src="https://i.mt.lv/img/mt/v2/apple_outline.svg" alt="ios" /></a>
+                <a href="https://play.google.com/store/apps/details?id=com.mikrotik.android.tikapp"><img style="width:120px" src="https://i.mt.lv/img/mt/v2/android_outline.svg" alt="anroid" /></a>
+            </div>
+		</div>
+	</footer>
+	</div>
+	<div class="smally"></div>
+</body>
+</html>
