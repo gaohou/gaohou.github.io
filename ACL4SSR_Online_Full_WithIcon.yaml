@@ -434,7 +434,7 @@ rule-providers:
     format: text
     type: http
   Sony:
-    url: https://github.com/gaohou/gaohou.github.io/raw/refs/heads/main/Sony.list
+    url: https://raw.githubusercontent.com/gaohou/gaohou.github.io/refs/heads/main/Sony.list
     path: ./ruleset/Sony.list
     behavior: classical
     interval: 86400
