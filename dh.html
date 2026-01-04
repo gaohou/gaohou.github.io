@@ -1,0 +1,644 @@
+﻿
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<title>高厚 - MikroTik中国总代理 - Routers and Wireless</title>
+	<meta charset="utf-8" />
+	<meta property="og:url" content="https://www.gaohou.com/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="MikroTik" />
+	<meta property="og:description" content="MikroTik is a Latvian company which was founded in 1996 to develop routers and wireless ISP systems. MikroTik now provides hardware and software for Internet connectivity in most of the countries around the world." />
+	<meta property="og:image" content="https://cncdn.gaohou.net/img/mtv2/fb_mikrotik.jpg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="MikroTik is a Latvian company which was founded in 1996 to develop routers and wireless ISP systems. MikroTik now provides hardware and software for Internet connectivity in most of the countries around the world." />
+	<meta name="keywords" content="download, mikrotik, routeros, switchos, winbox, netinstall, traffic sniffer for linux, bandwidth test for windows, neighbour viewer for windows, routerboard wireless drivers, routeros package, routeros torrent, routeros changelog" />
+	<link rel="icon" type="image/png" href="https://cncdn.gaohou.net/img/mtv2/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="https://cncdn.gaohou.net/css/app.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cncdn.gaohou.net/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="https://cncdn.gaohou.net/css/font-awesome.min.css" />
+	<!-- <link href="https://fonts.proxy.ustclug.org/css?family=Open+Sans:300,400&amp;subset=latin-ext" rel="stylesheet"> -->
+	<script type="text/javascript" src="https://cncdn.gaohou.net/js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="https://cncdn.gaohou.net/js/modernizr.js"></script>
+	<script async type="text/javascript" src="https://cncdn.gaohou.net/js/foundation5.min.js"></script>
+	<script async type="text/javascript" src="https://cncdn.gaohou.net/js/init.js"></script>
+	<!-- <script async src="https://mikrotik.com/js/jquery.cookie.js"></script> -->
+	<script type="text/javascript">
+var resizefncs=[],scrollfncs=[];
+$(document).ready(function(){
+	loadFoundation();
+	resizefncs.push("assignBorder();");resizefncs.push("adjustDrop();");
+	$(window).on('resize',performResize);
+	$(window).on('scroll',performScroll);
+	$(window).on('click',performClick);
+	performResize();
+});
+function loadFoundation(){
+	if(typeof $(document).foundation == "function"){
+		$(document).foundation({ accordion: { multi_expand: true } });
+	} else {
+		window.setTimeout(function(){loadFoundation();},50);
+	}
+}
+
+function performResize(){for(d in resizefncs){window.setTimeout(resizefncs[d],0);}}
+function performScroll(){for(d in resizefncs){window.setTimeout(resizefncs[d],0);}}
+function performClick(){for(d in resizefncs){window.setTimeout(resizefncs[d],0);}}
+/*border to nav*/
+function assignBorder(){makeBorder();resizefncs.push("makeBorder();");scrollfncs.push("makeBorder();");}
+function makeBorder(){
+	x=$("#sm-start, .sm-menu").position().top,
+	y=$(this).scrollTop(),
+	grid='.contain-to-grid',
+	cl='bar-border';
+
+	if ($('.smally').is(':visible') && $('.top-bar.expanded').is(':visible')){
+		if (y>x-388) { $(grid).addClass(cl);} else { $(grid).removeClass(cl); }
+	} else {
+		if ($('.page_top.show-for-medium-up').is(':visible') || y<=x-80 ){ $(grid).removeClass(cl); }
+		else{ $(grid).addClass(cl); }
+	}
+}
+function adjustDrop(){em=".page_title_empty";if ($(em).length>0){hh=Math.floor($(".page_top").height());if($(".sm-menu").is(':visible')){hh=hh+Math.floor($(".sm-menu").height());}$(em).css('height',hh+'px');}}
+function debugM(){loadFoundation();}
+	</script>
+<style type="text/css">
+.mt-head{background:url("//i.mt.lv/img/mt/v2/head/5.jpg") 0%;background-size:cover;opacity:0.45}
+
+.slide4 .mt-head{background:url("//i.mt.lv/img/mt/v2/head/wap_lte.jpg") 13%;background-size:cover;opacity:0.65}
+.slide5 .mt-head{background:url("//i.mt.lv/img/mt/v2/head/ltap_head.jpg") 13%;background-size:cover;opacity:0.65}
+.slide7 .mt-head{background:url("//i.mt.lv/img/mt/v2/head/16.jpg") 17%;background-size:cover;opacity:0.65}
+.slide8 .mt-head{background:url("//i.mt.lv/img/mt/v2/head/audience.jpg") 17%;background-size:cover;opacity:0.65}
+.slide9 .mt-head{background:url("//i.mt.lv/img/mt/v2/head/18.jpg") 17%;background-size:cover;opacity:0.65}
+
+.wide .columns{text-align:center !important}
+.wide .columns h1,.wide .columns p{color:white}
+.headbtn{padding:10px 60px !important;}
+
+.slide4 .headbtn{padding:10px 60px !important;background:white;color:#547db1}
+.slide5 .headbtn{padding:10px 60px !important;background:white;color:#6a6f4f}
+.slide7 .headbtn{padding:10px 60px !important;background:white;color:#552b6d}
+.slide8 .headbtn{padding:10px 60px !important;background:white;color:#7c489d}
+.slide9 .headbtn{padding:10px 60px !important;background:white;color:#466776}
+
+
+.slide4 .headbtn:hover{background:#3c6689;color:white;}
+.slide5 .headbtn:hover{background:#6b6e4f;color:white;}
+.slide7 .headbtn:hover{background:#552b6d;color:white;}
+.slide8 .headbtn:hover{background:#59325f;color:white;}
+.slide9 .headbtn:hover{background:#314b57;color:white;}
+
+
+@media only screen and (min-width:48.063em) {
+
+.mt-head{background:url("//i.mt.lv/img/mt/v2/head/5.jpg") 30%;background-size:cover;opacity:1}
+
+.slide4 .mt-head{background:url("//i.mt.lv/img/mt/v2/head/wap_lte.jpg") 30%;background-size:cover;opacity:1}
+.slide5 .mt-head{background:url("//i.mt.lv/img/mt/v2/head/ltap_head.jpg") 30%;background-size:cover;opacity:1}
+.slide7 .mt-head{background:url("//i.mt.lv/img/mt/v2/head/16.jpg") 30%;background-size:cover;opacity:1}
+.slide8 .mt-head{background:url("//i.mt.lv/img/mt/v2/head/audience.jpg") 30%;background-size:cover;opacity:1}
+.slide9 .mt-head{background:url("//i.mt.lv/img/mt/v2/head/18.jpg") 30%;background-size:cover;opacity:1}
+
+
+.wide .columns{text-align:left !important}
+.wide .columns p,.wide .columns h1{color:white}
+
+.cl{background:url("//i.mt.lv/img/mt/v2/transparent10.png");padding:0px 30px 10px 30px;-webkit-border-radius:3px;border-radius:3px;}
+.wide p{font-size:13px}
+}
+</style>
+<script type="text/javascript">
+function gasend(ur,tit){
+	ga('send','event','outbound','click',ur,{
+		'transport':'beacon',
+		'eventLabel':tit,
+		'hitCallback':function(){window.open(ur);}
+	});
+}
+function loadOrbit(){
+	if(typeof $(document).foundation == "function"){
+		s=document.createElement("scr"+"ipt");s.type="text/jav"+"ascr"+"ipt";s.src="https://cncdn.gaohou.net/js/foundation.orbit.min.js";s.async=true;$("head").append(s);
+		execOrbit();
+	} else {
+		window.setTimeout(function(){loadOrbit();},5);
+	}
+}
+function execOrbit(){
+	console.log(Foundation.libs.orbit);
+	if(typeof Foundation.libs.orbit == "object"){
+		loadFoundation();
+	} else {
+		window.setTimeout(function(){execOrbit();},5);
+	}
+}
+$(document).ready(function(){
+	$('.top_container').hide().delay(500).fadeIn('slow');
+	//MUM list
+	$('#show_events').click(function(){
+		$(this).fadeOut(function(){
+			$('#more_events').fadeIn();
+			$(window).trigger('resize');
+		});
+	});
+	$('#slide1_btn').click(function(){
+		gasend('http://mum.mikrotik.com/2017/EU/info/EN','MAIN:EU MUM');
+		return false;
+	});
+	$('#slide2_btn').click(function(){
+		gasend('https://routerboard.com/RB952Ui-5ac2nD-TC','MAIN:hap ac lite tower');
+		return false;
+	});  
+    
+	$('#slide3_btn').click(function(){
+		gasend('https://routerboard.com/RBOmniTikPG-5HacD','MAIN: OmniTIk 5 ac');
+		return false;
+	});     
+	loadOrbit();
+});
+</script>
+
+    <noscript>
+		<style>.top_container{display:block;}</style>
+    </noscript>
+</head>
+
+<body>
+	<div class="wrapper">
+	<header class="holder">
+<div class="contain-to-grid">
+	<nav class="top-bar" data-topbar role="navigation" data-options="sticky_on:large">
+		<ul class="title-area">
+			<li class="name"><h1><a href="https://www.gaohou.com"><img src="https://cncdn.gaohou.net/img/mtv2/logo.png" alt="#" /></a></h1></li>
+			<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+		</ul>
+		<section class="top-bar-section">
+<ul class="right triger">
+<li  class="active"><a href="https://www.gaohou.com/" >主页</a></li><li ><a href="#add">商城</a></li><li ><a href="https://mikrotik.com/aboutus" target="_blank">关于</a></li><li ><a href="index.htm" target="_blank">便捷</a></li><li ><a href="https://mikrotik.com/products" target="_blank">硬件</a></li><li ><a href="https://mikrotik.com/download" target="_blank">下载</a></li><li ><a href="https://mikrotik.com/support" target="_blank">支持</a></li><li ><a href="soft.html" target="_blank">辅助</a></li><li ><a href="https://mikrotik.com/client/" target="_blank">账户</a></li>
+</ul>
+		</section>
+	</nav>
+</div>
+	</header>
+
+
+	<div id="sm-start" class=" spec-space">
+
+
+<div class="slideshow-wrapper">
+	<div class="preloader"></div>
+	<ul data-orbit data-options="animation:fade;navigation_arrows:false; bullets:true;slide_number: false; pause_on_hover:false; timer_speed:10000;">
+
+
+
+
+
+
+
+
+
+
+		<li>
+			<div class="wide slide8">
+				<div class="top_container">
+					<div class="inner_top">
+
+						<div class="top_content">
+							<div class="row">
+								<div class="medium-6 medium-push-6 columns">
+									<h1>Audience</h1>
+									<p>
+										Who said you should hide your router in the closet? Bring it out in the open and enjoy faster and smoother signal. A tri-band router with meshing technology - for those who value both beauty and functionality.
+									</p>
+									<a href="https://mikrotik.com/product/audience" id="slide8_btn" class="button tiny radius headbtn">More details</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="mt-head"></div>
+				<div class="border-on"></div>
+			</div>
+		</li>
+
+		<li>
+			<div class="wide slide5">
+				<div class="top_container">
+					<div class="inner_top">
+
+						<div class="top_content">
+							<div class="row">
+								<div class="medium-6 medium-push-6 columns">
+									<h1>LtAP LTE kit</h1>
+									<p>A heavy-duty weatherproof access point with three SIM slots for easy LTE roaming and GPS support – it will save your time and money worldwide! Perfect for public transportation, food trucks, logistics, tracking, as it has several power options. Simple customization to fit your specific needs!</p>
+									<a href="https://mikrotik.com/product/ltap_lte_kit" id="slide5_btn" class="button tiny radius headbtn">More details</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="mt-head"></div>
+				<div class="border-on"></div>
+			</div>
+		</li>
+
+
+
+
+		<li>
+			<div class="wide slide4">
+				<div class="top_container">
+					<div class="inner_top">
+
+						<div class="top_content">
+							<div class="row">
+								<div class="medium-6 medium-push-6 columns">
+									<h1>wAP ac LTE kit</h1>
+									<p>A small package with a huge ambition  - weatherproof dual-band wireless access point with LTE support – use it anywhere!  High performance, great value, astonishing durability, functional and non-intrusive design – wAP ac LTE will meet most demands without making sacrifices. </p>
+									<a href="https://mikrotik.com/product/wap_ac_lte_kit" id="slide4_btn" class="button tiny radius headbtn">More details</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="mt-head"></div>
+				<div class="border-on"></div>
+			</div>
+		</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<li>
+		<div class="wide slide9">
+			<div class="top_container">
+				<div class="inner_top">
+
+					<div class="top_content">
+						<div class="row">
+							<div class="medium-6 medium-push-6 columns">
+								<h1>MikroTik mobile app</h1>
+                                <p>Use the MikroTik smartphone app to configure your router in the field, or to apply the most basic initial settings for your MikroTik home access point. Available for <b>Android</b> and <b>iOS</b> operating systems.</p>
+								<a href="https://mikrotik.com/mobile_app" id="slide9_btn" class="button tiny radius headbtn">More details</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="mt-head"></div>
+			<div class="border-on"></div>
+		</div>
+	</li>          
+        
+        
+ 	<li>
+		<div class="wide slide7">
+			<div class="top_container">
+				<div class="inner_top">
+
+					<div class="top_content">
+						<div class="row">
+							<div class="medium-6 medium-push-6 columns">
+								<h1>RB4011 series</h1>
+								<p>RB4011 series - amazingly powerful routers with ten Gigabit ports, SFP+ 10Gbps interface and IPsec hardware acceleration for a great price!</p>
+								<a href="https://mikrotik.com/product/rb4011igs_5hacq2hnd_in" id="slide7_btn" class="button tiny radius headbtn">More details</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="mt-head"></div>
+			<div class="border-on"></div>
+		</div>
+	</li>        
+
+
+
+
+	</ul>
+</div>
+
+
+
+<div class="row title border-on">
+    <div class="large-12 columns text-center">
+        <h1>MikroTik 新动向</h1>
+        <div class="h_line"></div>
+    </div>
+</div>
+
+
+<div class="row news">
+    
+    <div class="medium-6 columns">
+        <img src="https://i.mt.lv/cdn/mt/f048fad18ff38431e0401fd26bfcc2c9.jpg" alt="" />
+        <h2>最新新闻</h2> <p>在我们的新闻中，我们推出了一个令人兴奋的接入点，具有可交换机箱，低成本逆火天线产品，双开关支持我们的交换机和更多。<br>中文期刊：<a href="https://cncdn.gaohou.net/pdf/newsletter_89.pdf" target="_blank">89期</a>&nbsp;<a href="https://cncdn.gaohou.net/pdf/newsletter_90.pdf" target="_blank">90期</a>&nbsp;<a href="https://cncdn.gaohou.net/pdf/newsletter_91.pdf" target="_blank">91期</a></p>
+    </div>
+    <div class="medium-6 columns">
+        <a href="https://youtu.be/QWnWZIjb6q4"><img src="https://cncdn.gaohou.net/mimg/mt/b416f342fba62ec74bc8767c9b65210e16eb5981.jpg" alt="" /></a>
+        <h2>Cloud Core Router</h2> <p>云核心路由器是一个工业级路由器与尖端的多核Tilera CPU，提供9，16，36和72核心版本！前所未有的动力和无与伦比的性能 - 这是我们的新旗舰设备。如果您每秒需要数百万个数据包 - 具有72个核心的云核心路由器1072是您的最佳选择 - 高达1.2亿PPS是可能的。</p>
+    </div>
+</div>
+<div class="row news">
+    
+    <div class="medium-6 columns">
+        <a href="http://mum.mikrotik.com"><img src="https://i.mt.lv/cdn/mt/4c97ea9a705774aaafc1bf995be640d6.jpg" alt="" /></a>
+        <h2>Mikrotik 用户会议</h2> <p>MikroTik用户会议（MUM）是关于MikroTik RouterOS软件和RouterBoard硬件的会议。提出问题，听演讲，与专家交谈，看看MikroTik和用户自己的有趣的技术演示 - 所有在这里，在MUM。</p>
+    </div>
+    <div class="medium-6 columns">
+        <a href="https://routerboard.com/RB962UiGS-5HacT2HnT"><img src="https://cncdn.gaohou.net/mimg/mt/1017e97409d5ddb7b21027e60b97ce522f6c2bf9.jpg" alt="" /></a>
+        <h2>hAP ac</h2> <p>hAP ac是我们最普遍的家庭或办公室无线设备。具有千兆端口的双频带3x3 MIMO，可以打开802.11ac速度的全部优势，同时保持与2GHz和5GHz的传统设备的兼容性</p>
+    </div>
+</div>
+<div class="row news">
+    
+    <div class="medium-6 columns">
+        <a href="https://www.youtube.com/watch?v=2cym7j8BcJ0&feature=youtu.be"><img src="https://cncdn.gaohou.net/mimg/mt/1176d72f9dc37a1df461e3a801c10590ff6f09b4.jpg" alt="" /></a>
+        <h2>Mikrotik Wireless Solutions</h2> <p>我们为您的无线连接需求提供完整的解决方案 - 从您的家庭网络开始，并达到ISP运营中心。观看我们关于可用性的新视频。</p>
+    </div>
+    <div class="medium-6 columns">
+        <a href="http://mikrotikacademy.com"><img src="https://cncdn.gaohou.net/mimg/mt/f238f4b2e66db48235af14a29a72421094b143e5.jpg" alt="" /></a>
+        <h2>Mikrotik 培训</h2> <p>MikroTik通过为教育机构（大学，技术学校，学院，职业学校和任何其他学校）推出MikroTik学院计划，扩展了RouterOS的学习可能性。在你的大学学习MikroTik。</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns news_soc show-for-medium-up">
+        <hr />
+        <div class="row">
+            <div class="small-8 columns">
+                <p>您也可以关注我们，并获得最新更新资讯！<b><a href="https://twitter.com/mikrotik_com" target="_blank">Twitter</a></b> or <b><a href="https://www.facebook.com/mikrotik" target="_blank">Facebook!</a></b>
+                </p>
+            </div>
+            <div class="small-4 columns text-right">
+                <a href="https://twitter.com/mikrotik_com" target="_blank">
+                    <img src="https://cncdn.gaohou.net/img/mtv2/twitter.png" alt="" />
+                </a>
+                <a href="https://www.facebook.com/mikrotik" target="_blank">
+                    <img src="https://cncdn.gaohou.net/img/mtv2/facebook.png" alt="" />
+                </a>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="large-12 columns show-for-small-only small-soc">
+        <hr />
+        <div class="row">
+            <div class="large-12 columns text-center">
+                <p>随时拨打我们的全国服务电话 4000005265 您也可以关注我们，并获得最新更新资讯！<b><a href="https://twitter.com/mikrotik_com" target="_blank">Twitter</a></b> or <b><a href="https://www.facebook.com/mikrotik" target="_blank">Facebook!</a></b>
+                </p>
+                <a href="https://twitter.com/mikrotik_com" target="_blank">
+                    <img src="https://cncdn.gaohou.net/img/mtv2/twitter.png" alt="" />
+                </a>
+                <a href="https://www.facebook.com/mikrotik" target="_blank">
+                    <img src="https://cncdn.gaohou.net/img/mtv2/facebook.png" alt="" />
+                </a>
+            </div>
+        </div>
+        <hr style="margin:8px 0 0 0;" />
+    </div>
+</div>
+
+
+<div class="mum_wrap" data-parallax="scroll" data-speed="0.6" data-z-index="0" data-image-src="https://cncdn.gaohou.net/f/mum_bg.jpg">
+    <div class="row">
+        <div class="large-12 columns wiz">
+            <h2>MikroTik 认证金牌工程师 2019</h2>
+        </div>
+    </div>
+
+    <div class="row max-limit">
+        
+        <div class="large-3 columns e1 left">
+            <a href="https://mikrotik.com/consultants/asia/china" target="_blank">
+                <div class="event_wrap">
+                    <div class="semibold">熊茂祥</div>
+                    <div class="light">MTCRE, MTCWE, MTCTCE, MTCUME, MTCINE</div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="large-3 columns e2 left">
+            <a href="https://mikrotik.com/consultants/asia/china" target="_blank">
+                <div class="event_wrap">
+                    <div class="semibold">David</div>
+                    <div class="light">MTCRE</div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="large-3 columns e1 left">
+            <a href="https://mikrotik.com/consultants/asia/china" target="_blank">
+                <div class="event_wrap">
+                    <div class="semibold">Weiming Wu</div>
+                    <div class="light">MTCRE, MTCWE, MTCTCE, MTCUME</div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="large-3 columns e2 left">
+            <a href="https://mikrotik.com/consultants/asia/china" target="_blank">
+                <div class="event_wrap">
+                    <div class="semibold">王海霖</div>
+                    <div class="light">MTCRE, MTCTCE</div>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+    <div class="row collapse other_events show-for-large-up max-limit"><div class="medium-3 columns left"><div class="swrap"><a href="http://mum.mikrotik.com/2017/KH/info" target="_blank" class="small_event"><div> </div><div class="light"></div></a></div><div class="swrap"><a href="http://mum.mikrotik.com/2017/MM/info" target="_blank" class="small_event"><div>  </div><div class="light"> </div></a></div></div><div class="medium-3 columns left"><div class="swrap"><a href="http://mum.mikrotik.com/2017/LA/info" target="_blank" class="small_event"><div>  </div><div class="light"> </div></a></div><div class="swrap"><a href="http://mum.mikrotik.com/2017/ID/info" target="_blank" class="small_event"><div> </div><div class="light"> </div></a></div></div></div>
+    <div class="row collapse other_events show-for-small-up hide-for-large-up" style="background-color:white">
+        <div class="large-12 columns text-center" id="show_events">+ Show more upcoming events</div>
+        <div class="large-12 columns" id="more_events"> <a href="http://mum.mikrotik.com/2017/KH/info" target="_blank" class="small_event"> <div class="small_event_wrap"> <div>Cambodia in Phnom Penh</div> <div class="light">Apr 24</div> </div> <div class="arrow1"></div> </a> <a href="http://mum.mikrotik.com/2017/MM/info" target="_blank" class="small_event"> <div class="small_event_wrap"> <div>Myanmar in Yangon</div> <div class="light">May 5</div> </div> <div class="arrow1"></div> </a> <a href="http://mum.mikrotik.com/2017/LA/info" target="_blank" class="small_event"> <div class="small_event_wrap"> <div>Laos in Vientiane</div> <div class="light">May 8</div> </div> <div class="arrow1"></div> </a> <a href="http://mum.mikrotik.com/2017/ID/info" target="_blank" class="small_event"> <div class="small_event_wrap"> <div>Indonesia in Yogyakarta</div> <div class="light">Oct 27</div> </div> <div class="arrow1"></div> </a></div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns text-right wiz">
+            <p class="mum-txt">以上推荐工程师,依据MikroTik相关算法,本公司不负任何责任!</p>
+        </div>
+    </div>
+</div>
+<a id="add"></a>
+<div class="row title border-on">
+	<div class="large-12 columns text-center">
+		<h1>MIKROTIK 中国代理</h1>
+		<div class="h_line"></div>
+	</div>
+</div>
+
+<div class="row text-center training_f" data-equalizer>
+    <div class="medium-4 columns">
+        <div data-equalizer-watch>
+            <img src="https://cncdn.gaohou.net/diqu/shanghai.png" alt="" />
+            <h2>北  京</h2>
+            <p>
+                华北地区
+            </p>
+        </div>
+        <a href="https://shop58846483.taobao.com/" target="_blank" class="button small radius expand">进入网店</a>
+    </div>
+    <div class="medium-4 columns">
+        <div data-equalizer-watch>
+            <img src="https://cncdn.gaohou.net/diqu/wuhan.png" alt="" />
+            <h2>上  海</h2>
+            <p>
+               华东地区 
+				</p>
+        </div>
+        <a href="https://gaohou.taobao.com" target="_blank" class="button small radius expand">进入网店</a>
+    </div>
+
+    <div class="medium-4 columns">
+        <div data-equalizer-watch>
+            <img src="https://cncdn.gaohou.net/diqu/guangzhou.png" alt="" />
+            <h2>深   圳</h2>
+            <p>
+                华南地区
+            </p>
+        </div>
+        <a href="https://shop267530825.taobao.com/" target="_blank" class="button small radius expand">进入网店</a>
+    </div>
+</div>
+
+
+<div class="closest_training_wrap" data-parallax="scroll" data-speed="0.6" data-z-index="0" data-image-src="https://cncdn.gaohou.net/f/training_bg.jpg">
+    <div class="row">
+        <div class="medium-9 columns">
+            <h2>教程,辅助,案例</h2> <ul class="tabs" data-tab="" role="tablist"><li class="tab-title active" role="presentational"><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1">教程</a></li><li class="tab-title true" role="presentational"><a href="#panel2-2" role="tab" tabindex="-1" aria-selected="false" controls="panel2-2">辅助</a></li><li class="tab-title true" role="presentational"><a href="#panel2-3" role="tab" tabindex="-1" aria-selected="false" controls="panel2-3">技术</a></li><li class="tab-title true" role="presentational"><a href="#panel2-4" role="tab" tabindex="-1" aria-selected="false" controls="panel2-4">案例</a></li><li class="tab-title true" role="presentational"><a href="#panel2-5" role="tab" tabindex="-1" aria-selected="false" controls="panel2-5">博客</a></li><li class="tab-title true" role="presentational"><a href="#panel2-6" role="tab" tabindex="-1" aria-selected="false" controls="panel2-6">文档</a></li></ul><div class="tabs-content"><section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1"><ul><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://alaincasault.com/" target="_blank">111111<meta itemprop="startDate" content="2017-02-24"><meta itemprop="endDate" content="2017-02-26">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="North America, Canada, Sainte-Thérèse - Vendredi, samedi, dimanche"><span itemprop="name">1111111111111111111</span>, </span><span itemprop="organizer">CSPE</span> <span itemprop="name">(MTCNA), French</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://wirelessnetware.ca/workshop/" target="_blank">222222<meta itemprop="startDate" content="2017-02-25"><meta itemprop="endDate" content="2017-02-25">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="North America, Canada, Toronto"><span itemprop="name">Canada, Toronto</span>, </span><span itemprop="organizer">Hani Rahrouh- wirelessnetware.ca</span> <span itemprop="name">(The Dude), English</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.microcom.us/trmtmtcna.html" target="_blank">February 27-March 01<meta itemprop="startDate" content="2017-02-27"><meta itemprop="endDate" content="2017-03-01">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="North America, USA, Sacramento, CA"><span itemprop="name">USA, Sacramento, CA</span>, </span><span itemprop="organizer">Joya Johnson - Microcom Technologies</span> <span itemprop="name">(MTCNA), English</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.microcom.us/trmtmtcwe.html" target="_blank">March 09-10<meta itemprop="startDate" content="2017-03-09"><meta itemprop="endDate" content="2017-03-10">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="North America, USA, Seattle, WA"><span itemprop="name">USA, Seattle, WA</span>, </span><span itemprop="organizer">Joya Johnson - Microcom Technologies</span> <span itemprop="name">(MTCWE), English</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.microcom.us/trmtmtcna.html" target="_blank">March 13-15<meta itemprop="startDate" content="2017-03-13"><meta itemprop="endDate" content="2017-03-15">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="North America, USA, Calabasas, CA"><span itemprop="name">USA, Calabasas, CA</span>, </span><span itemprop="organizer">Joya Johnson - Microcom Technologies</span> <span itemprop="name">(MTCNA), English</span></a></li></ul></section><section role="tabpanel" aria-hidden="false" class="content true" id="panel2-2"><ul><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.optimix.com.ar" target="_blank">February 24-26<meta itemprop="startDate" content="2017-02-24"><meta itemprop="endDate" content="2017-02-26">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Latin America, Chile, Santiago de Chile"><span itemprop="name">Chile, Santiago de Chile</span>, </span><span itemprop="organizer">Ing. Jorge Filippo - Optimix.com.ar</span> <span itemprop="name">(MTCINE, MTCRE, MTCNA), Spanish</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="https://www.facebook.com/academiamikrotik/?ref=aymt_homepage_panel" target="_blank">February 24-26<meta itemprop="startDate" content="2017-02-24"><meta itemprop="endDate" content="2017-02-26">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Latin America, Colombia, CALI"><span itemprop="name">Colombia, CALI</span>, </span><span itemprop="organizer">IP CANALES S.A.S.</span> <span itemprop="name">(MTCNA), Spanish</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.home-capacity.com" target="_blank">February 25-26<meta itemprop="startDate" content="2017-02-25"><meta itemprop="endDate" content="2017-02-26">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Latin America, Puerto Rico, San Juan"><span itemprop="name">Puerto Rico, San Juan</span>, </span><span itemprop="organizer">Home-Capacity SA</span> <span itemprop="name">(MTCWE), Spanish</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://academia-mikrotik.weebly.com/" target="_blank">February 27-28<meta itemprop="startDate" content="2017-02-27"><meta itemprop="endDate" content="2017-02-28">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Latin America, Colombia, Cali - IP CANALES SAS"><span itemprop="name">Colombia, Cali - IP CANALES SAS</span>, </span><span itemprop="organizer">Ing. Nelson López, Sertinet C.A</span> <span itemprop="name">(MTCRE), Spanish</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.home-capacity.com" target="_blank">March 01-02<meta itemprop="startDate" content="2017-03-01"><meta itemprop="endDate" content="2017-03-02">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Latin America, Puerto Rico, San Juan"><span itemprop="name">Puerto Rico, San Juan</span>, </span><span itemprop="organizer">Home-Capacity SA</span> <span itemprop="name">(MTCTCE), Spanish</span></a></li></ul></section><section role="tabpanel" aria-hidden="false" class="content true" id="panel2-3"><ul><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="https://beyondtechnologies.info/b/mikrotik-training/112-mtcna.html" target="_blank">February 24-25<meta itemprop="startDate" content="2017-02-24"><meta itemprop="endDate" content="2017-02-25">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Africa, Mali, BAMAKO"><span itemprop="name">Mali, BAMAKO</span>, </span><span itemprop="organizer">Beyond Technologies</span> <span itemprop="name">(MTCUME), French</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://LAOLU.ADEBAYO" target="_blank">February 25-26<meta itemprop="startDate" content="2017-02-25"><meta itemprop="endDate" content="2017-02-26">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Africa, Nigeria, Lagos"><span itemprop="name">Nigeria, Lagos</span>, </span><span itemprop="organizer">Adebayo Olaoluwa Paul</span> <span itemprop="name">(MTCTCE), English</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.trainwireless.com" target="_blank">February 27-March 02<meta itemprop="startDate" content="2017-02-27"><meta itemprop="endDate" content="2017-03-02">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Africa, South Africa, Cape Town"><span itemprop="name">South Africa, Cape Town</span>, </span><span itemprop="organizer">David Savage</span> <span itemprop="name">(MTCNA), English</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.miro.co.za" target="_blank">February 28-28<meta itemprop="startDate" content="2017-02-28"><meta itemprop="endDate" content="2017-02-28">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Africa, South Africa, Jhb"><span itemprop="name">South Africa, Jhb</span>, </span><span itemprop="organizer">Hannes Willemse</span> <span itemprop="name">(MTCNA), English</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="https://beyondtechnologies.info/b/mikrotik-training/110-mtcna.html" target="_blank">March 03-05<meta itemprop="startDate" content="2017-03-03"><meta itemprop="endDate" content="2017-03-05">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Africa, Ivory Coast, ABIDJAN"><span itemprop="name">Ivory Coast, ABIDJAN</span>, </span><span itemprop="organizer">Beyond Technologies</span> <span itemprop="name">(MTCNA, Introduction), French</span></a></li></ul></section><section role="tabpanel" aria-hidden="false" class="content true" id="panel2-4"><ul><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://mits-co.com/content/mtctce-cyprus-nicosia-february-24-24-2017" target="_blank">February 24-24<meta itemprop="startDate" content="2017-02-24"><meta itemprop="endDate" content="2017-02-24">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Europe, Cyprus, Nicosia"><span itemprop="name">Cyprus, Nicosia</span>, </span><span itemprop="organizer">M.IT.S Co. - Mani Raissdana</span> <span itemprop="name">(MTCTCE), English</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="https://www.pgnetpro.bg/" target="_blank">February 24-26<meta itemprop="startDate" content="2017-02-24"><meta itemprop="endDate" content="2017-02-26">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Europe, Bulgaria, Sofia"><span itemprop="name">Bulgaria, Sofia</span>, </span><span itemprop="organizer">PG NET PRO LTD</span> <span itemprop="name">(MTCRE), Bulgarian</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://shop.mikrotikcanarias.com/es/home/165-curso-ipv6.html" target="_blank">February 25-26<meta itemprop="startDate" content="2017-02-25"><meta itemprop="endDate" content="2017-02-26">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Europe, Spain, Las Palmas"><span itemprop="name">Spain, Las Palmas</span>, </span><span itemprop="organizer">Fibercli.com</span> <span itemprop="name">(MTCIPv6E), Spanish</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://mits-co.com/content/mtcwe-cyprus-nicosia-february-25-25-2017" target="_blank">February 25-25<meta itemprop="startDate" content="2017-02-25"><meta itemprop="endDate" content="2017-02-25">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Europe, Cyprus, Nicosia"><span itemprop="name">Cyprus, Nicosia</span>, </span><span itemprop="organizer">M.IT.S Co. - Mani Raissdana</span> <span itemprop="name">(MTCWE), English</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://MikroTik.Me" target="_blank">February 25-26<meta itemprop="startDate" content="2017-02-25"><meta itemprop="endDate" content="2017-02-26">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Europe, Russia, Saint-Petersburg"><span itemprop="name">Russia, Saint-Petersburg</span>, </span><span itemprop="organizer">Vasilev Kirill - MikroTik.Me</span> <span itemprop="name">(MTCNA), Russian</span></a></li></ul></section><section role="tabpanel" aria-hidden="false" class="content true" id="panel2-5"><ul><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.campbell.co.nz" target="_blank">February 28-28<meta itemprop="startDate" content="2017-02-28"><meta itemprop="endDate" content="2017-02-28">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Oceania, New Zealand, Wellington"><span itemprop="name">New Zealand, Wellington</span>, </span><span itemprop="organizer">Campbell Technology Limited</span> <span itemprop="name">(Introduction), English</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.campbell.co.nz" target="_blank">March 01-01<meta itemprop="startDate" content="2017-03-01"><meta itemprop="endDate" content="2017-03-01">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Oceania, New Zealand, Wellington"><span itemprop="name">New Zealand, Wellington</span>, </span><span itemprop="organizer">Campbell Technology Limited</span> <span itemprop="name">(MikroTik SXT Workshop), English</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.campbell.co.nz" target="_blank">March 14-15<meta itemprop="startDate" content="2017-03-14"><meta itemprop="endDate" content="2017-03-15">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Oceania, New Zealand, Wellington"><span itemprop="name">New Zealand, Wellington</span>, </span><span itemprop="organizer">Campbell Technology Limited</span> <span itemprop="name">(MTCRE), English</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.campbell.co.nz" target="_blank">March 28-30<meta itemprop="startDate" content="2017-03-28"><meta itemprop="endDate" content="2017-03-30">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Oceania, New Zealand, Wellington"><span itemprop="name">New Zealand, Wellington</span>, </span><span itemprop="organizer">Campbell Technology Limited</span> <span itemprop="name">(MTCNA), English</span></a></li></ul></section><section role="tabpanel" aria-hidden="false" class="content true" id="panel2-6"><ul><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.informationbeam.net/training-programs/" target="_blank">February 24-26<meta itemprop="startDate" content="2017-02-24"><meta itemprop="endDate" content="2017-02-26">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Asia, Myanmar, Yangon"><span itemprop="name">Myanmar, Yangon</span>, </span><span itemprop="organizer">i-BEAM - Minh Lay (Makito)</span> <span itemprop="name">(MTCNA), Myanmar</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.idn.id" target="_blank">February 24-26<meta itemprop="startDate" content="2017-02-24"><meta itemprop="endDate" content="2017-02-26">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Asia, Indonesia, Jakarta"><span itemprop="name">Indonesia, Jakarta</span>, </span><span itemprop="organizer">Oky Tria Saputra, ID-Networkers</span> <span itemprop="name">(MTCNA), Bahasa indonesia</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="https://htp.co.id/upcoming-training/mikrotik/mtcna24feb17" target="_blank">February 24-26<meta itemprop="startDate" content="2017-02-24"><meta itemprop="endDate" content="2017-02-26">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Asia, Indonesia, Kota Depok"><span itemprop="name">Indonesia, Kota Depok</span>, </span><span itemprop="organizer">PT. Hendevane Indonesia</span> <span itemprop="name">(MTCNA), English</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="https://www.meetup.com/MikroTik-User-Group-Singapore-MUG-SG/events/237676291/" target="_blank">February 24-24<meta itemprop="startDate" content="2017-02-24"><meta itemprop="endDate" content="2017-02-24">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Asia, Singapore, Singapore"><span itemprop="name">Singapore, Singapore</span>, </span><span itemprop="organizer">MikroTik.SG | Alagas Network</span> <span itemprop="name">(Introduction), English</span></a></li><li itemscope itemtype="http://schema.org/EducationEvent"><a itemprop="url" href="http://www.router.co.id/mataram-daftar/" target="_blank">February 24-26<meta itemprop="startDate" content="2017-02-24"><meta itemprop="endDate" content="2017-02-26">, <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="Asia, Indonesia, Serang"><span itemprop="name">Indonesia, Serang</span>, </span><span itemprop="organizer">Bambang</span> <span itemprop="name">(MTCNA), Bahasa indonesia</span></a></li></ul></section></div>
+        </div>
+        <div class="medium-3 columns text-right">
+            <a href="https://www.gaohou.com/soft.html" class="button small radius orange expand">全部技术相关文档链接</a>
+        </div>
+    </div>
+</div>
+
+<div class="swhw_wrap">
+	<div class="row title border-on">
+		<div class="large-12 columns text-center">
+			<h1>HARDWARE & SOFTWARE</h1><div class="h_line"></div>
+		</div>
+	</div>
+    <div class="row text-center swhw" data-equalizer>
+        <div class="medium-4 columns">
+            <div data-equalizer-watch>
+                <img src="https://cncdn.gaohou.net/f/ros.png" alt="" />
+                <h2>RouterOS</h2>
+                <p>
+                    RouterOS是RouterBOARD硬件的操作系统。它具有ISP的所有必要的功能 - 路由，防火墙，带宽管理，无线接入点，backhautl链路，热点网关，VPN服务器等。快速和简单的安装和一个易于使用的界面！
+                </p>
+            </div>
+            <a href="/software" class="button small radius expand">Find out more</a>
+        </div>
+	<div class="medium-4 columns">
+            <div data-equalizer-watch>
+		<img src="https://cncdn.gaohou.net/f/catalog.png" alt="" />
+                <h2>Product catalog</h2>
+                <p>
+                    MikroTik制造路由器，交换机和无线系统的每一个目的，从小型办公室或家庭，到运营商ISP网络，有一个设备的每一个目的。有关我们的产品及其功能的完整列表，请参阅我们的产品目录。
+                </p>
+            </div>
+            <a href="http://download2.mikrotik.com/2016-Q3Q4.pdf" class="button small radius expand" target="_blank">Open catalog</a>
+        </div>
+        <div class="medium-4 columns">
+            <div data-equalizer-watch>
+                <img src="https://cncdn.gaohou.net/f/distrb.png" alt="" />
+                <h2>Distribution</h2>
+                <p>
+                    要购买我们的RouterBOARD，CCR，CRS等产品，以及获得技术支持和售前咨询，请联系我们广泛的经销商网络。看到地图找到最近的一个。
+                </p>
+            </div>
+		<a href="/buy" class="button small radius expand">Find out more</a>
+        </div>
+    </div>
+</div>
+
+	</div>
+
+	<footer>
+		<div class="row">
+			<div class="small-4 medium-2 columns">
+				<h2>MikroTik</h2>
+				<ul>
+					<li><a href="https://mikrotik.com">官网</a></li>
+					<li><a href="https://mikrotik.com/aboutus">官网</a></li>
+					<li><a href="https://mikrotik.com/customers">Customers</a></li>
+					<li><a href="https://mikrotik.com/jobs">工作</a></li>
+				</ul>
+			</div>
+			<div class="small-4 medium-2 columns">
+				<h2>Support</h2>
+				<ul>
+					<li><a href="https://mikrotik.com/support">支持</a></li>
+					<li><a href="http://forum.mikrotik.com" target="_blank">论坛</a></li>
+					<li><a href="http://wiki.mikrotik.com/wiki/Main_Page" target="_blank">Wiki</a></li>
+					<li><a href="mailto:support@mikrotik.com">邮件</a></li>
+				</ul>
+			</div>
+			<div class="small-4 medium-2 columns">
+				<h2>Other</h2>
+				<ul>
+					<li><a href="http://wiki.mikrotik.com/wiki/MikroTik_News" target="_blank">资讯</a></li>
+					<li><a href="http://mum.mikrotik.com" target="_blank">MUM</a></li>
+					<li><a href="http://designs.mikrotik.com" target="_blank">Designs</a></li>
+					<li><a href="https://www.youtube.com/channel/UCwFW0ZgZNcmZgAYN_zVxQ-Q" target="_blank">Youtube</a></li>
+				</ul>
+			</div>
+			<div class="medium-5 columns fl">
+				<h2>Sign up for the newsletter</h2>
+				<p>Please sign up to get notified about new RouterOS version releases and other useful information!</p>
+				<form action="https://mikrotik.com/client/ecom_notify.php" method="post">
+					<div class="row collapse"><div class="small-8 columns">
+						<input type="text" class="subscr_input" name="email_subscribe" value="" placeholder="Enter your e-mail" />
+					</div><div class="small-4 columns">
+						<input type="submit" name="email_subscribe_footer" class="button postfix subscr" value="Subscribe!" />
+					</div></div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-12 column"><hr/></div>
+			<div class="small-5 columns">
+				<a href="#"><img class="foot_logo" src="https://cncdn.gaohou.net/img/mtv2/logo_white.png" alt="" /></a>
+			</div>
+			<div class="small-7 columns text-right">
+				<ul class="footer_soc">
+					<li>
+						<a href="mailto:sales@mikrotik.com">
+						<img class="rotate_s" src="https://cncdn.gaohou.net/img/mtv2/mail.png" alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="http://facebook.com/mikrotik" target="_blank">
+						<img class="rotate_s" src="https://cncdn.gaohou.net/img/mtv2/facebook.png" alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="http://twitter.com/mikrotik_com" target="_blank">
+						<img class="rotate_s" src="https://cncdn.gaohou.net/img/mtv2/twitter.png" alt="" />
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	</div>
+	<div class="smally"></div>
+	<!-- <script async type="text/javascript" src="https://mikrotik.com/js/listing.js"></script> -->
+</body>
+</html>
