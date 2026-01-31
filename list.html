@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的个性化导航</title>
+  <style>
+    /* 全局变量定义，方便一键换色 */
+    :root {
+      --primary: #1a73e8;
+      --bg: #fdfdfd;
+      --card-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      --card-hover: 0 8px 25px rgba(0,0,0,0.1);
+      --text: #3c4043;
+    }
+
+    body {
+      font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding-bottom: 50px;
+    }
+
+    /* 顶部固定搜索区域 */
+    .header-sticky {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .search-input {
+      width: 90%;
+      max-width: 500px;
+      padding: 12px 25px;
+      border: 1px solid #dfe1e5;
+      border-radius: 30px;
+      font-size: 16px;
+      transition: all 0.3s;
+      outline: none;
+    }
+
+    .search-input:focus {
+      box-shadow: 0 1px 6px rgba(32,33,36,0.2);
+      border-color: var(--primary);
+    }
+
+    /* 分类标签样式 */
+    .filter-bar {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-tag {
+      padding: 5px 15px;
+      border-radius: 15px;
+      background: #f1f3f4;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+
+    .btn-tag.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* 响应式网格容器 */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    /* 卡片动画效果 */
+    .item-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid #f1f3f4;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+      animation: fadeIn 0.5s ease backwards;
+    }
+
+    .item-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--card-hover);
+      border-color: var(--primary);
+    }
+
+    .item-card img {
+      width: 42px;
+      height: 42px;
+      margin-bottom: 15px;
+    }
+
+    .item-card h4 {
+      margin: 0 0 5px 0;
+      font-size: 15px;
+      color: var(--primary);
+    }
+
+    .item-card span {
+      font-size: 12px;
+      color: #70757a;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 没搜到结果时的状态 */
+    #no-results {
+      text-align: center;
+      margin-top: 50px;
+      display: none;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header-sticky">
+  <input type="text" class="search-input" id="searchBox" placeholder="输入名称或描述实时搜索..." onkeyup="filterItems()">
+  
+  <div class="filter-bar" id="filterBar">
+    <button class="btn-tag active" onclick="filterCategory('all')">全部</button>
+    <button class="btn-tag" onclick="filterCategory('Google')">Google</button>
+    <button class="btn-tag" onclick="filterCategory('AI')">AI</button>
+    <button class="btn-tag" onclick="filterCategory('Tools')">工具</button>
+  </div>
+</div>
+
+<div class="grid-container" id="grid">
+  <a href="https://gemini.google.com" class="item-card" data-tags="Google AI">
+    <img src="https://www.gstatic.com/lamda/images/favicon_v1_150160d13988652c77d5f.png" alt="Gemini">
+    <h4>Gemini</h4>
+    <span>生成式 AI 对话助手</span>
+  </a>
+
+  <a href="https://github.com" class="item-card" data-tags="Tools">
+    <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub">
+    <h4>GitHub</h4>
+    <span>代码托管与协作平台</span>
+  </a>
+
+  <a href="https://drive.google.com" class="item-card" data-tags="Google Tools">
+    <img src="https://ssl.gstatic.com/docs/doclist/images/drive_2020q4_48dp.png" alt="Drive">
+    <h4>云端硬盘</h4>
+    <span>协作云端存储</span>
+  </a>
+  
+  </div>
+
+<div id="no-results">没有找到相关内容 🔍</div>
+
+<script>
+  // 实时搜索功能
+  function filterItems() {
+    const query = document.getElementById('searchBox').value.toLowerCase();
+    const cards = document.querySelectorAll('.item-card');
+    let hasVisible = false;
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      if (text.includes(query)) {
+        card.style.display = "flex";
+        hasVisible = true;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    document.getElementById('no-results').style.display = hasVisible ? "none" : "block";
+  }
+
+  // 分类点击功能
+  function filterCategory(cat) {
+    // 切换按钮状态
+    const buttons = document.querySelectorAll('.btn-tag');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    const cards = document.querySelectorAll('.item-card');
+    cards.forEach(card => {
+      const tags = card.getAttribute('data-tags');
+      if (cat === 'all' || tags.includes(cat)) {
+        card.style.display = "flex";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
